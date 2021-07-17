@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Banka Entegrasyonları</title>
+</head>
+
+<body style="padding-left: 15%; padding-right: 15%; padding-bottom: 10%; min-width: 500px;">
+    <script>
+        function show() {
+            var bank = document.getElementById("banks");
+            var bankValue = bank.value;
+            document.getElementById("iframe").src = "images/" + bankValue +".png";
+        }
+        function reset() {
+            document.getElementById("iframe").src = "";
+        }
+
+        function iframeDidLoad() {
+            alert("Done");
+        }
+    </script>
+
+    <div class="dropdown" align="center" style="margin-top: 30px;">
+        <label for="banks">Banka Seçimi Yapınız:</label>
+        <select id="banks" name="banks" style="margin-left: 10px; margin-right: 10px;">
+            <option value="Akbank">Akbank</option>
+            <option value="Ziraat">Ziraat</option>
+            <option value="YapiKredi">Yapı Kredi</option>
+            <option value="QNB">QNB</option>
+        </select>
+        <button id="show" class="show" onclick="show()">Göster</button>
+        <button id="reset" class="reset" onclick="reset()">Reset</button>
+    </div>
+
+    <div id="iframeContainer" style="position: relative; width: 100%; height: 100%; margin-top: 5%;">
+        <iframe id="iframe" class="iframe" frameborder="1" width="100%" height="100%">
+
+        </iframe>
+    </div>
+</body>
+
+</html>
