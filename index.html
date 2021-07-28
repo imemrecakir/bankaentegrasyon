@@ -3,13 +3,10 @@
 <head>
     <title>Banka Entegrasyonları</title>
     <style>
+        div,
         iframe {
-    width: 100px;
-    height: 50px;
-    margin: 0 auto;
-    background-color: #777;
-    display:block
-}
+            display: block
+        }
     </style>
 </head>
 
@@ -18,7 +15,7 @@
         function show() {
             var bank = document.getElementById("banks");
             var bankValue = bank.value;
-            document.getElementById("iframe").src = "images/" + bankValue +".jpg";
+            document.getElementById("iframe").src = "images/" + bankValue + ".jpg";
         }
         function reset() {
             document.getElementById("iframe").src = "";
